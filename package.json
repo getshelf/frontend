@@ -2,6 +2,10 @@
   "name": "@getshelf/frontend",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "description": "",
   "homepage": "https://github.com/getshelf/frontend#readme",
   "bugs": {
@@ -16,6 +20,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run dev --workspace web",
+    "build": "npm run build --workspace web",
+    "lint": "npm run lint --workspace web"
   }
 }
